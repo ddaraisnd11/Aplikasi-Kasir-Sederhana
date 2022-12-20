@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:backgroundTint="@color/white"
+        android:paddingLeft="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Novel Different"
+        android:textSize="18sp"
+        android:paddingTop="20dp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_gravity="center"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:paddingTop="50dp"
+        android:src="@drawable/novel_different"/>
+    <TextView
+        android:id="@+id/tvHrg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rp. 80,000"
+        android:textSize="18sp"
+        android:paddingTop="20dp"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jumlah Barang"
+        android:textColor="#000000"
+        android:paddingTop="30dp"
+        android:paddingLeft="20dp"
+        android:textSize="18sp"/>
+    <EditText
+        android:id="@+id/etJmlBrg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Masukkan jumlah"/>
+    <Button
+        android:id="@+id/btnTtl"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#FFF6BD"
+        android:text="Total"
+        android:textColor="#000000"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"/>
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="0"
+        android:textSize="18sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bayar"
+        android:textColor="#000000"
+        android:paddingLeft="20dp"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"/>
+    <EditText
+        android:id="@+id/etBayar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan nominal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+    <Button
+        android:id="@+id/btnHsl"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#FFF6BD"
+        android:text="Hasil"
+        android:textColor="#000000"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kembalian"
+        android:textColor="#000000"
+        android:paddingLeft="20dp"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/tvKmbln"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="0"
+        android:textSize="18sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+    <Button
+        android:id="@+id/btnClr"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#FFF6BD"
+        android:text="Clear"
+        android:textColor="#000000"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"/>
+
+
+
+</LinearLayout>
