@@ -118,3 +118,72 @@
 
 
 </LinearLayout>
+
+// MainActivity.java
+
+package com.isnaini.cart_remidial;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+
+public class MainActivity extends AppCompatActivity {
+    EditText etJumlah, etBayar;
+    Button btnTtl, btnHsl, btnClr;
+    TextView tvHrg, tvTotal, tvKmbln;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        etJumlah=(EditText) findViewById(R.id.etJmlBrg);
+        etBayar=(EditText) findViewById(R.id.etBayar);
+        btnTtl= (Button) findViewById(R.id.btnTtl);
+        btnHsl= (Button) findViewById(R.id.btnHsl);
+        btnClr= (Button) findViewById(R.id.btnClr);
+        tvHrg= (TextView) findViewById(R.id.tvHrg);
+        tvTotal= (TextView) findViewById(R.id.tvTotal);
+        tvKmbln= (TextView) findViewById(R.id.tvKmbln);
+
+        btnTtl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+             double jmlbrg, hrgbrg, total;
+             jmlbrg=Double.valueOf(etJumlah.getText().toString().trim());
+             hrgbrg=Double.valueOf(80000);
+             total=jmlbrg * hrgbrg;
+             String total1=String.valueOf(total);
+             tvTotal.setText(total1);
+            }
+        });
+
+        btnHsl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                double bayar, ttlhrg, hasil;
+                ttlhrg=Double.valueOf(tvTotal.getText().toString().trim());
+                bayar=Double.valueOf(etBayar.getText().toString().trim());
+                hasil=bayar - ttlhrg;
+                String hasil1=String.valueOf(hasil);
+                tvKmbln.setText(hasil1);
+            }
+        });
+
+        btnClr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                etJumlah.setText("");
+                etBayar.setText("");
+                tvTotal.setText("");
+                tvKmbln.setText("");
+
+            }
+        });
+    }
+}
